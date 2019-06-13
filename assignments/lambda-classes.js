@@ -4,6 +4,37 @@
 
 
 
+class Person {
+    constructor(attributes) {
+         this.name = attributes.name;
+         this.age = attributes.age;
+         this.location = attributes.location;
+    }
+    //methods
+    speak(variable) {
+        return `${this.name} is from Bedrock.`;
+    }
+
+
+    class Instructor extends Person {
+        constructor(instructorAttr) {
+            super(instructorAttr);
+            this.specialty = instAttributes.specialty;
+            this.favLanguage = instAttributes.favLanguage;
+            this.catchPhrase = instAttributes.catchPhrase;
+        }
+        demo(subject) {
+            return `Today we are learning about ${subject}!`;
+        }
+        grade(Student, subject) {
+            return `${Student.name} receives a perfect score on ${subject}`
+        }
+    }
+
+
+
+
+
 const dan = new Instructor({
     name: 'Dan',
     age: 'Infinity',
@@ -38,14 +69,7 @@ const dan = new Instructor({
     favSubjects: ['Html', 'CSS', 'JavaScript'],
 });
 
-    const joscelyn = new Student({
-    name: "Joscelyn",
-    age: 29,
-    location: "California",
-    previousBackground: "English teacher",
-    className: 'Web21',
-    favSubjects: ["Computer Science", "Philosophy", "English"],
-});
+    
 
   const marguel = new ProjectManager({
     name: 'Marguel',
@@ -87,49 +111,4 @@ const dan = new Instructor({
 
 
     
-    const christian = new ProjectManager({
-    name: 'Christian',
-    age: '32',
-    gradClassName: 'WEB18',
-    favInstructor: 'Every Instructor in Lambda',
-    location: 'Seattle, WA',
-    specialty: 'Data Structures & Algorithms',
-    favLanguage: 'JavaScript',
-    catchPhrase: "Dont forget your daily commit.",
-});
-
-
-
    
-    const pat = new ProjectManager({
-    name: 'Pat',
-    age: '38',
-    gradClassName: 'WEB18',
-    favInstructor: 'Brett Madrid',
-    location: 'Petaluma, Ca',
-    specialty: 'Empathetic to the struggle of Redux',
-    favLanguage: 'JavaScript',
-    catchPhrase: 'Lets google that together.'
-});
-
-    const darren = new ProjectManager({
-    name: 'Darren',
-    age: '25',
-    gradClassName: 'WEB18',
-    favInstructor: 'Josh Knell',
-    location: 'North Carolina',
-    specialty: 'React',
-    favLanguage: 'Javascript',
-    catchPhrase: 'Gang. Gang.',
-});
-
-    const austin = new ProjectManager({
-    name: 'Austin',
-    age: '23',
-    gradClassName: 'WEB18',
-    favInstructor: 'Josh Knell',
-    location: 'Somewhere',
-    specialty: 'Java',
-    favLanguage: 'Java',
-    catchPhrase: ":eggplant:",
-});
